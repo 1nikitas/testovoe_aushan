@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "data-processing-project"
+version = "0.1.0"
+description = "A project to process data files and sort numbers using merge sort."
+authors = ["nikitas <n.kiselev2002@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+apache-airflow = "^2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
