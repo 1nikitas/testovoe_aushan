@@ -1,7 +1,13 @@
-import pytest
+import sys
 from pathlib import Path
-from src.data.file_handler import FileHandler
+
+sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
+
 import tempfile
+
+import pytest
+
+from data.handlers.file_handler import FileHandler
 
 
 @pytest.fixture

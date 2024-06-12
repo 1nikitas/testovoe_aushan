@@ -24,13 +24,13 @@ class FileHandler:
         return files_content
 
     def save_results(
-        self, processed_data: List[Tuple[str, List[int]]], output_directory: Path  # noqa: E501
+        self, processed_data: List[Tuple[str, List[int]]], output_directory: Path
     ):
         """Сохраняет обработанные данные в результирующую директорию"""
         logger.info("Начало сохранения результатов")
         output_directory.mkdir(parents=True, exist_ok=True)
         for idx, (filename, numbers) in enumerate(processed_data):
-            result_filename = output_directory / f"TEST_AUCHAN_success_{idx+1}.txt"  # noqa: E501
+            result_filename = output_directory / f"TEST_AUCHAN_success_{idx+1}.txt"
             with open(result_filename, "w") as file:
                 for number in numbers:
                     file.write(f"{number}\n")

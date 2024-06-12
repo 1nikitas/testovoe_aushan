@@ -1,9 +1,15 @@
-import pytest
+import sys
 from pathlib import Path
-from src.data.file_handler import FileHandler
-from src.data.processor import DataProcessor
-from src.services.data_processing_service import DataProcessingService
+
+sys.path.append(str(Path(__file__).resolve().parents[2] / "src"))
+
 import tempfile
+
+import pytest
+
+from data.handlers.file_handler import FileHandler
+from data.processor import DataProcessor
+from services.data_processing_service import DataProcessingService
 
 
 @pytest.fixture
